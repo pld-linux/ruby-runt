@@ -27,6 +27,8 @@ ruby setup.rb config \
 
 ruby setup.rb setup
 
+rdoc -o rdoc doc lib
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{ruby_rubylibdir}
@@ -38,6 +40,7 @@ ruby setup.rb install \
 rm -rf $RPM_BUILD_ROOT
 
 %files
+%doc rdoc README TODO CHANGES
 %defattr(644,root,root,755)
 %{ruby_rubylibdir}/runt
 %{ruby_rubylibdir}/runt.rb
