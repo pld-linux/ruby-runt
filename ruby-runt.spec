@@ -45,7 +45,7 @@ ruby setup.rb install \
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%doc rdoc README TODO CHANGES
 %defattr(644,root,root,755)
+%doc rdoc README TODO CHANGES
 %{ruby_rubylibdir}/runt
 %{ruby_rubylibdir}/runt.rb
