@@ -1,5 +1,5 @@
-%define ruby_archdir    %(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
+%define		ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
+%define		ruby_rubylibdir	%(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 Summary:	Ruby Temporal Expressions
 Summary(pl):	Wyra¿enia czasowe dla jêzyka Ruby
 Name:		ruby-runt
