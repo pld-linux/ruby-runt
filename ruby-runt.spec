@@ -9,6 +9,7 @@ Group:		Development/Libraries
 Source0:	http://rubyforge.org/frs/download.php/614/runt-0.2.0.tgz
 # Source0-md5:	2bf595823d47d998183b18a4b2a1cac1
 URL:		http://runt.rubyforge.org/
+BuildArch:	noarch
 BuildRequires:	ruby
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
