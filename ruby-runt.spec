@@ -2,14 +2,14 @@ Summary:	Ruby Temporal Expressions
 Summary(pl):	Wyra¿enia czasowe dla jêzyka Ruby
 Name:		ruby-runt
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://rubyforge.org/frs/download.php/614/runt-%{version}.tgz
 # Source0-md5:	2bf595823d47d998183b18a4b2a1cac1
 URL:		http://runt.rubyforge.org/
 BuildRequires:	rpmbuild(macros) >= 1.263
-BuildRequires:	ruby
+BuildRequires:	ruby-modules
 #BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
