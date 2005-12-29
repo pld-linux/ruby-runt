@@ -8,9 +8,10 @@ Group:		Development/Libraries
 Source0:	http://rubyforge.org/frs/download.php/614/runt-%{version}.tgz
 # Source0-md5:	2bf595823d47d998183b18a4b2a1cac1
 URL:		http://runt.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
 #BuildArch:	noarch
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
