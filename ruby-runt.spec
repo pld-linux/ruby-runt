@@ -1,5 +1,5 @@
 Summary:	Ruby Temporal Expressions
-Summary(pl.UTF-8):   Wyrażenia czasowe dla języka Ruby
+Summary(pl.UTF-8):	Wyrażenia czasowe dla języka Ruby
 Name:		ruby-runt
 Version:	0.2.0
 Release:	2
