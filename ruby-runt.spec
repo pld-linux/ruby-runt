@@ -1,5 +1,5 @@
 Summary:	Ruby Temporal Expressions
-Summary(pl):	Wyra¿enia czasowe dla jêzyka Ruby
+Summary(pl.UTF-8):   WyraÅ¼enia czasowe dla jÄ™zyka Ruby
 Name:		ruby-runt
 Version:	0.2.0
 Release:	2
@@ -18,9 +18,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Runt is an implementation of select temporal patterns by Martin Fowler
 in the super-fantastic Ruby language.
 
-%description -l pl
-Runt to implementacja wybranych wyra¿eñ czasowych Martina Fowlera w
-jêzyku Ruby.
+%description -l pl.UTF-8
+Runt to implementacja wybranych wyraÅ¼eÅ„ czasowych Martina Fowlera w
+jÄ™zyku Ruby.
 
 %prep
 %setup -q -n runt-%{version}
