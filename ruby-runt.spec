@@ -3,17 +3,15 @@ Summary:	Ruby Temporal Expressions
 Summary(pl.UTF-8):	Wyrażenia czasowe dla języka Ruby
 Name:		ruby-%{pkgname}
 Version:	0.7.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Libraries
 Source0:	http://rubygems.org/downloads/%{pkgname}-%{version}.gem
 # Source0-md5:	15c36c030d985091b927f2a1f390fff0
 URL:		http://runt.rubyforge.org/
-BuildRequires:	rpmbuild(macros) >= 1.484
-BuildRequires:	ruby >= 1:1.8.6
-BuildRequires:	ruby-modules
-#BuildArch:	noarch
-%{?ruby_mod_ver_requires_eq}
+BuildRequires:	rpm-rubyprov
+BuildRequires:	rpmbuild(macros) >= 1.665
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,13 +47,11 @@ ri documentation for %{pkgname}.
 Dokumentacji w formacie ri dla %{pkgname}.
 
 %prep
-%setup -q -c
-%{__tar} xf %{SOURCE0} -O data.tar.gz | %{__tar} xz
-find -newer README  -o -print | xargs touch --reference %{SOURCE0}
+%setup -q -n %{pkgname}-%{version}
 
 %build
 ruby setup.rb config \
-	--site-ruby=%{ruby_rubylibdir} \
+	--site-ruby=%{ruby_vendorlibdir} \
 	--so-dir=%{ruby_archdir}
 
 ruby setup.rb setup
@@ -68,7 +64,7 @@ rm ri/cache.ri
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{ruby_rubylibdir},%{ruby_ridir},%{ruby_rdocdir}}
+install -d $RPM_BUILD_ROOT{%{ruby_vendorlibdir},%{ruby_ridir},%{ruby_rdocdir}}
 
 ruby setup.rb install \
 	--prefix=$RPM_BUILD_ROOT
@@ -82,8 +78,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README TODO CHANGES doc examples
-%{ruby_rubylibdir}/runt
-%{ruby_rubylibdir}/runt.rb
+%{ruby_vendorlibdir}/runt.rb
+%{ruby_vendorlibdir}/runt
 
 %files rdoc
 %defattr(644,root,root,755)
