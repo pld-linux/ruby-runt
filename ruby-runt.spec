@@ -62,8 +62,9 @@ ruby setup.rb setup
 
 rdoc --ri --op ri lib
 rdoc --op rdoc lib
-rm -r ri/{Date,ExpressionBuilder,Numeric,Time}
+rm -r ri/{Date,ExpressionBuilder,Time}
 rm ri/created.rid
+rm ri/cache.ri
 
 %install
 rm -rf $RPM_BUILD_ROOT
